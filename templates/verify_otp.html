@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify OTP</title>
+</head>
+
+<body>
+
+    <h1>Verify Your Email</h1>
+
+    <p>Enter the OTP sent to your email.</p>
+
+    <form action="/verify-otp" method="post">
+
+        <input type="hidden" name="email" value="{{ email }}">
+
+        <p>OTP</p>
+        <input
+            type="text"
+            name="otp"
+            placeholder="Enter 6-digit OTP"
+            maxlength="6"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">Verify OTP</button>
+
+    </form>
+
+    <br>
+
+    <a href="/register">Register again</a>
+
+</body>
+</html>

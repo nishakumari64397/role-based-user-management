@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+</head>
+
+<body>
+
+    <h1>Edit Profile</h1>
+
+    <form action="/edit-profile" method="post">
+
+        <p>Full Name</p>
+        <input
+            type="text"
+            name="full_name"
+            value="{{ user[1] }}"
+            required
+        >
+
+        <p>Email Address</p>
+        <input
+            type="email"
+            value="{{ user[2] }}"
+            disabled
+        >
+
+        <p>Phone Number</p>
+        <input
+            type="tel"
+            name="phone"
+            value="{{ user[3] }}"
+            required
+        >
+
+        <p>Date of Birth</p>
+        <input
+            type="date"
+            name="dob"
+            value="{{ user[4] }}"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">Save Changes</button>
+
+    </form>
+
+    <br>
+
+    <a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>
