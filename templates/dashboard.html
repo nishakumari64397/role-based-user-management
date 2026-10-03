@@ -63,6 +63,26 @@
     <p><strong>Email:</strong> {{ user[2] }}</p>
     <p><strong>Phone Number:</strong> {{ user[3] }}</p>
     <p><strong>Date of Birth:</strong> {{ user[4] }}</p>
+    {% if user[10] == "Student" %}
+
+    <hr>
+
+    <h2>Assigned Teacher</h2>
+
+    {% if teacher %}
+
+        <p><strong>Teacher Name:</strong> {{ teacher[0] }}</p>
+        <p><strong>Teacher Email:</strong> {{ teacher[1] }}</p>
+        <p><strong>Teacher Phone:</strong> {{ teacher[2] }}</p>
+        <p><strong>Subject:</strong> {{ teacher[3] }}</p>
+
+    {% else %}
+
+        <p>No teacher has been assigned yet.</p>
+
+    {% endif %}
+
+{% endif %}
 
 
     <h3>Profile Picture</h3>
